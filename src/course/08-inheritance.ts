@@ -1,16 +1,16 @@
 // inheritance - abstraer comportamientos
 
-class Animal {
+export abstract class Animal {
     constructor (public name: string){}
 
     gretings(){
         return `Hello ${this.name}`
     }
 }
-const animal1 = new Animal('Tiger')
-console.log(animal1.gretings());
+// const animal1 = new Animal('Tiger')
+// console.log(animal1.gretings());
 
-class Dog extends Animal {
+export class Dog extends Animal {
     constructor(
         name: string,
         public owner: string
@@ -25,7 +25,7 @@ class Dog extends Animal {
     }
 }
 
-const pet1 = new Dog('Perrito', 'Lleritos')
-console.log(pet1.gretings());
-pet1.woof(2);
-console.log('This is the owner called: ', pet1.owner);
+// const pet1 = new Dog('Perrito', 'Lleritos')
+// console.log(pet1.gretings());
+// pet1.woof(2);
+// console.log('This is the owner called: ', pet1.owner);
