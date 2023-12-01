@@ -5,6 +5,10 @@ import { Product } from '../models/product.model';
 export class ProductMemoryService {
     private products: Product[] = [];
 
+    getAll(){
+        return this.products;
+    }
+
     create (item: CreateProductDto): Product {
         const newProduct = {
             ...item,
