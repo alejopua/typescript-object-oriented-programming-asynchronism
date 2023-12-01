@@ -8,7 +8,7 @@ export class MyService {
         return this.name;
     }
 
-    static create(name: string){
+    static create(name: string): MyService{
         if (MyService.instance === null) {
             MyService.instance = new MyService(name);
         }
