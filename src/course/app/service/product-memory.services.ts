@@ -4,7 +4,19 @@ import { Product } from '../models/product.model';
 import { ProductService } from '../models/product-service.model';
 
 export class ProductMemoryService implements ProductService{
+    private static instance: ProductMemoryService;
     private products: Product[] = [];
+
+    private constructor() {
+      // Constructor privado para evitar instanciación externa
+    }
+
+    static getInstance(): ProductMemoryService {
+        if (!ProductMemoryService.instance) {
+            ProductMemoryService.instance = new ProductMemoryService();
+        }
+        return ProductMemoryService.instance;
+    }
     
     getAll(): Product[] {
         return this.products;

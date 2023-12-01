@@ -1,6 +1,6 @@
 import { ProductMemoryService } from "./service/product-memory.services";
 
-const productService = new ProductMemoryService();
+const productService = ProductMemoryService.getInstance();
 productService.create({
     title: 'Product 1',
     price: 100,
