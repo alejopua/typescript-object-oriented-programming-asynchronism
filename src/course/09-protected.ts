@@ -16,9 +16,9 @@ export class Animal {
     }
 }
 const animal1 = new Animal('Tiger')
-console.log(animal1.greetings());
+// console.log(animal1.greetings());
 
-class Dog extends Animal {
+export class Dog extends Animal {
     constructor(
         name: string,
         public owner: string
@@ -38,6 +38,6 @@ class Dog extends Animal {
 
 const pet1 = new Dog('Perrilais', 'Lleritos');
 pet1.name = 'firulais';
-console.log(pet1.greetings());
-pet1.woof(2);
-console.log('This is the owner called: ', pet1.owner);
+// console.log(pet1.greetings());
+// pet1.woof(2);
+// console.log('This is the owner called: ', pet1.owner);
